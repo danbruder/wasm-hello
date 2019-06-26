@@ -1,8 +1,12 @@
 [package]
 name = "danbruder/wasm-hello"
-version = "0.1.1"
+version = "0.2.0"
 description = "Hello world!"
 
 [[module]]
 name = "wasm_hello"
 source = "target/wasm32-unknown-unknown/release/wasm-hello.wasm"
+
+[[command]]
+name = "hello"
+module = "wasm_hello"
